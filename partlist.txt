@@ -1,0 +1,29 @@
+samDEV_09 Part list
+
+Part   Value        Package     Comment
+                    
+A08                 0603        User LED connected to PA08
+C1     100n         C0603       
+C2     15p          C0603       optional (use only if external crystal used)
+C3     15p          C0603       optional (use only if external crystal used)
+C4     10n          C0603       
+C5     100n         C0603       
+C7     100n         C0603       
+D1     MBR0520LT    SOD123      power selection diode
+D2     MBR0520LT    SOD123      power selection diode
+IC1    CH340G       SOIC16      USB-UART bridge
+IC2    1117-3.3     SOT223      LDO
+JP1                 1X08_OCTA   pin header
+JP2                 1X08_OCTA   pin header
+JP5                 2X05_1,27B  programming pin header 
+K1     mini USB     generic     Mini USB connector
+PWR                 0603 	   Power LED
+Q1     3215         3215        optional external 32kHz crystal 
+Q2     CSTCRCSTCE   CSTCESMALL  12 MHz resonator for CH340G
+R1     solder / 0   R0201       solder jumper to connect PA08 to pin header
+R2     solder / 0   R0201       solder jumper to connect PA09 to pin header
+R3     120  / 220   R0603       resistor for power LED
+R4     120  / 220   R0603       resistor for user LED
+R5     ~10k         R0603       pullup for reset
+S2                  SMDSWITCH   Chinese SMD switch
+U$1    SAMD09SOIC14 SO14        Atmel SAMD09 ARM Cortex M0+ microcontroller 
