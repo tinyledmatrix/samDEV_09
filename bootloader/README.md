@@ -1,1 +1,2 @@
 Bootloader by Jeremy g. adapted to run also with my board. See also his [repository here](https://github.com/WeisTekEng/SamD09-Mini/).
+For some documentation see [here](https://hackaday.io/project/12099-samdev09/log/41271)
