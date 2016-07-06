@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAMD09C13A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>UART_Bootloader</AssemblyName>
+    <Name>UART_Bootloader</Name>
+    <RootNamespace>UART_Bootloader</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ExternalProgrammingToolCommand />
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files>
+          <file path="src/ASF/sam0/drivers/nvm/nvm.c" framework="" version="3.27.0" source="sam0\drivers\nvm\nvm.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/nvm/quick_start_basic/qs_nvm_basic.h" framework="" version="3.27.0" source="sam0\drivers\nvm\quick_start_basic\qs_nvm_basic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/nvm/nvm.h" framework="" version="3.27.0" source="sam0\drivers\nvm\nvm.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/system.c" framework="" version="3.27.0" source="sam0\drivers\system\system.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/system.h" framework="" version="3.27.0" source="sam0\drivers\system\system.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/pinmux/pinmux.c" framework="" version="3.27.0" source="sam0\drivers\system\pinmux\pinmux.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/pinmux/pinmux.h" framework="" version="3.27.0" source="sam0\drivers\system\pinmux\pinmux.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h" framework="" version="3.27.0" source="sam0\drivers\system\pinmux\quick_start\qs_pinmux_basic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/make/Makefile.sam.in" framework="" version="3.27.0" source="sam0\utils\make\Makefile.sam.in" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.c" framework="" version="3.27.0" source="common\utils\interrupt\interrupt_sam_nvic.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt.h" framework="" version="3.27.0" source="common\utils\interrupt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.h" framework="" version="3.27.0" source="common\utils\interrupt\interrupt_sam_nvic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/parts.h" framework="" version="3.27.0" source="common\utils\parts.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/gclk.c" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock_samd09_d10_d11\gclk.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock.c" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock_samd09_d10_d11\clock.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock_config_check.h" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock_samd09_d10_d11\clock_config_check.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/gclk.h" framework="" version="3.27.0" source="sam0\drivers\system\clock\gclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/clock_samd09_d10_d11/clock_feature.h" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock_samd09_d10_d11\clock_feature.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/clock/clock.h" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_clocks.h" framework="" version="3.27.0" source="sam0\drivers\system\clock\clock_samd09_d10_d11\module_config\conf_clocks.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt.c" framework="" version="3.27.0" source="sam0\drivers\system\interrupt\system_interrupt.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt.h" framework="" version="3.27.0" source="sam0\drivers\system\interrupt\system_interrupt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd09/system_interrupt_features.h" framework="" version="3.27.0" source="sam0\drivers\system\interrupt\system_interrupt_samd09\system_interrupt_features.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/power/power_sam_d_r/power.h" framework="" version="3.27.0" source="sam0\drivers\system\power\power_sam_d_r\power.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/system/reset/reset_sam_d_r/reset.h" framework="" version="3.27.0" source="sam0\drivers\system\reset\reset_sam_d_r\reset.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/compiler.h" framework="" version="3.27.0" source="sam0\utils\compiler.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/header_files/io.h" framework="" version="3.27.0" source="sam0\utils\header_files\io.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/status_codes.h" framework="" version="3.27.0" source="sam0\utils\status_codes.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/samd09d14a.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\samd09d14a.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/samd09c13a.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\samd09c13a.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/samd09.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\samd09.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/port.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\port.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/gclk.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\gclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/hmatrixb.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\hmatrixb.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/evsys.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\evsys.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/rtc.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\rtc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/tc.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\tc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/wdt.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\wdt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/sysctrl.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\sysctrl.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/pac.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\pac.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/dmac.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\dmac.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/sercom.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\sercom.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/pm.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\pm.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/mtb.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\mtb.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/dsu.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\dsu.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/adc.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\adc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/nvmctrl.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\nvmctrl.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/component/eic.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\component\eic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/dmac.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\dmac.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/pm.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\pm.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/gclk.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\gclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/port.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\port.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/sercom0.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\sercom0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/sercom1.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\sercom1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/tc1.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\tc1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/tc2.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\tc2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/eic.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\eic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/adc.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\adc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/wdt.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\wdt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/pac1.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\pac1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/evsys.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\evsys.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/pac0.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\pac0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/pac2.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\pac2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/sysctrl.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\sysctrl.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/dsu.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\dsu.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/sbmatrix.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\sbmatrix.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/nvmctrl.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\nvmctrl.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/mtb.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\mtb.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/instance/rtc.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\instance\rtc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/pio/samd09c13a.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\pio\samd09c13a.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/include/pio/samd09d14a.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\include\pio\samd09d14a.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/source/gcc/startup_samd09.c" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\source\gcc\startup_samd09.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/source/system_samd09.c" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\source\system_samd09.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/cmsis/samd09/source/system_samd09.h" framework="" version="3.27.0" source="sam0\utils\cmsis\samd09\source\system_samd09.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/preprocessor/tpaste.h" framework="" version="3.27.0" source="sam0\utils\preprocessor\tpaste.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/preprocessor/mrepeat.h" framework="" version="3.27.0" source="sam0\utils\preprocessor\mrepeat.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/preprocessor/mrecursion.h" framework="" version="3.27.0" source="sam0\utils\preprocessor\mrecursion.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/preprocessor/preprocessor.h" framework="" version="3.27.0" source="sam0\utils\preprocessor\preprocessor.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/preprocessor/stringz.h" framework="" version="3.27.0" source="sam0\utils\preprocessor\stringz.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/utils/syscalls/gcc/syscalls.c" framework="" version="3.27.0" source="sam0\utils\syscalls\gcc\syscalls.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/arm_math.h" framework="" version="3.27.0" source="thirdparty\CMSIS\Include\arm_math.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h" framework="" version="3.27.0" source="thirdparty\CMSIS\Include\core_cmFunc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h" framework="" version="3.27.0" source="thirdparty\CMSIS\Include\core_cm0plus.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h" framework="" version="3.27.0" source="thirdparty\CMSIS\Include\core_cmInstr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a" framework="" version="3.27.0" source="thirdparty\CMSIS\Lib\GCC\libarm_cortexM0l_math.a" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf" framework="" version="3.27.0" source="thirdparty\CMSIS\CMSIS_END_USER_LICENCE_AGREEMENT.pdf" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/README.txt" framework="" version="3.27.0" source="thirdparty\CMSIS\README.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt" framework="" version="3.27.0" source="thirdparty\CMSIS\ATMEL-disclaimer.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Lib/license.txt" framework="" version="3.27.0" source="thirdparty\CMSIS\Lib\license.txt" changed="False" content-id="Atmel.ASF" />
+        </files>
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.27.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>
+    </avrtool>
+    <avrtoolserialnumber>J41800031987</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10040000</avrdeviceexpectedsignature>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>0</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2178031800000047</ToolNumber>
+      <ToolName>EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800031987</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/Config</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD09_DFP\1.0.21\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd09c13a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/Config</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD09_DFP\1.0.21\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/Config</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD09_DFP\1.0.21\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd09c13a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/Config</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD09_DFP\1.0.21\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Device_Startup\startup_samd09.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_samd09.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device_Startup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device_Startup\samd09c13a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\samd09c13a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
