@@ -11,7 +11,7 @@
  *             SERCOM0_PAD1: SCLK
  *             SERCOM0_PAD2: MISO
  *
- * licensed under  BSD 3-Clause License see below
+ * licensed under BSD 3-Clause License see below
  */ 
 /*
 Redistribution and use in source and binary forms, with or without modification, are 
@@ -48,8 +48,9 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     /*  f_SPI_CLK = f_SERCOM / ( 2* (SPI_BAUD_VALUE +1) )
         F_SPI_CLK must be smaller than or equal to 12MHz [SAMD09 datasheet p. 467]
     */
-    #define SPI_BAUD_VALUE 0     // change if needed
-                                 // with f_SERCOM = 1MHz -> f_SPI_CLK = 500kHz
+    #define SPI_BAUD_VALUE 2     // change if needed f_SPI_CLK = F_SERCOM/(2* (BAUD+1) )
+                                 // =0: with f_SERCOM = 1MHz -> f_SPI_CLK = 500kHz
+								 // =2: with f_SERCOM =48MHz -> f_SPI_CLK = 8MHz
 
 	/* setup function for this little SPI library. 
        IN: uint8_t mode: SPI moder [0-3] 
